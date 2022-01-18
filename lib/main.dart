@@ -7,7 +7,7 @@ import 'home.dart';
 void main() {
   runApp( const MaterialApp(
     debugShowCheckedModeBanner: false,
-      home: MyApp()));
+      home: SplashScreen()));
 }
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState(){
     super.initState();
-    doWork();
+   // doWork();
     }
 
     doWork()async{
@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Text('body'),
+      body: Center(child: Text('body')),
     );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -8,6 +10,15 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    navigateToScreen();
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -19,5 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
     );
+  }
+
+  void navigateToScreen()async {
+    await Future.delayed(const Duration(milliseconds: 2500),(){});
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home()));
   }
 }
